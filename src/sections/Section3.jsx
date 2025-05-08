@@ -1,39 +1,40 @@
 import React from "react";
 import BankDisAdvCard from "../components/BankDisAdvCard";
 import assets from "../constants/assets";
+import { useLanguage } from "../context/LanguageContext";
+import translations from "../translations/translations";
 
 const Section3 = () => {
+  const { language } = useLanguage();
+  const t = translations[language].section3;
   return (
-    <div className="mt-20 justify-center mx-32">
-      <div className=" mx-auto text-center text-[56px] leading-[70px] font-bold text-[#141414] ">
-        Keeping Your{" "}
+    <div className="md:mt-20 mt-5 justify-center md:mx-32">
+      <div className=" mx-auto text-center md:text-[56px] text-xl leading-[30px] md:leading-[70px] font-bold text-[#141414] ">
+        {t.keepingYour}{" "}
         <span className="bg-[#114A55] text-white rounded-lg p-1 px-2 mr-2">
-          Money{" "}
+          {t.money}{" "}
         </span>
-        in the Bank <br /> Is Making You Poorer Every Day
+        {t.inTheBank}
+        <br /> {t.isMakingYouPoorerEveryDay}
       </div>
-      <p className="text-2xl text-[#868686] text-center mt-5">
-        With Edufe, you invest in seconds and start <br /> earning real returns,
-        monthly
+      <p className="md:text-2xl text-sm text-[#868686] text-center mt-5">
+        {t.line1} <br />
+        {t.line2}
       </p>
 
-      <div className="flex justify-center mt-20 gap-7">
+      <div className="md:flex justify-center md:mt-20 gap-7 md:mx-0 mx-5">
         <div className="flex-1">
           <BankDisAdvCard
-            title={["Inflation Drains", <br key="1" />, "Your Savings"]}
-            subTitle={
-              "Inflation in Honduras means your money loses value every single day it sits in a bank account"
-            }
+            title={t.title1}
+            subTitle={t.subtitle1}
             img={assets.inflationIcon}
           />
         </div>
         <div className="flex-1">
           <BankDisAdvCard
-            title={["Banks Take 6%", <br key="1" />, "in Hidden Fees"]}
+            title={t.title2}
+            subTitle={t.subtitle2}
             img={assets.moneyBagIcon}
-            subTitle={
-              "Banks offer only 8% annually, but with 6% in hidden fees during first year, your real return is closer to 2%"
-            }
           />
         </div>
         <div className="flex-1">
@@ -43,7 +44,7 @@ const Section3 = () => {
             subTitle={
               "And that’s if you go to the bank in person, sign paperwork, and wait days to activate"
             }
-            imgWidth="w-[170px]"
+            imgWidth="md:w-[170px] w-[120px]"
           />
         </div>
       </div>

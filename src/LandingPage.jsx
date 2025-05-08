@@ -16,7 +16,6 @@ import Section11 from "./sections/Section11";
 import Section12 from "./sections/Section12";
 import Footer from "./sections/Footer";
 
-
 export const LandingPage = () => {
   useEffect(() => {
     const scroll = new SmoothScroll('a[href*="#"]', {
@@ -42,8 +41,8 @@ export const LandingPage = () => {
       <Section9 />
       <Section10 />
       <Section11 />
-      <Section12/>
-      <Footer/>
+      <Section12 />
+      <Footer />
     </>
   );
 };

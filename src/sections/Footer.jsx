@@ -1,49 +1,54 @@
 import React from "react";
 import assets from "../constants/assets";
+import { useLanguage } from "../context/LanguageContext";
+import translations from "../translations/translations";
 
 const Footer = () => {
+  const { language } = useLanguage();
+  const t = translations[language].footer;
+
   return (
     <footer className="bg-gray-50 py-8 px-4 sm:px-6 lg:px-16 mt-20">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-start">
           {/* Left Side - Logo and Text */}
           <div className="flex flex-col space-y-4">
-              <img src={assets.logo} alt="Edufe Logo" className="h-10 w-10" />
-              <div>
-                <h2 className="text-2xl font-bold text-[#141414]">
-                  Edufe{" "}
-                  <span className="font-normal text-[#868686] text-lg">
-                    (The smarter way to grow your money)
-                  </span>
-                </h2>
-              </div>
+            <img src={assets.logo} alt="Edufe Logo" className="h-10 w-10" />
+            <div>
+              <h2 className="text-2xl font-bold text-[#141414]">
+                Edufe{" "}
+                <span className="font-normal text-[#868686] text-lg">
+                  ({t.slogan})
+                </span>
+              </h2>
+            </div>
 
             <nav className="flex space-x-6 text-[#141414] text-[16px]">
               <a href="#how-it-works" className="hover:text-[#31C440]">
-                How It Works
+                {t.howItWorks}
               </a>
               <a href="#our-solutions" className="hover:text-[#31C440]">
-                Our Solutions
+                {t.ourSolutions}
               </a>
               <a href="#why-edufe" className="hover:text-[#31C440]">
-                Why Edufe
+                {t.whyEdufe}
               </a>
               <a href="#help" className="hover:text-[#31C440]">
-                Help
+                {t.help}
               </a>
               <a href="#privacy-policy" className="hover:text-[#31C440]">
-                Privacy Policy
+                {t.privacyPolicy}
               </a>
             </nav>
 
-            <p className="text-[#868686] text-sm">
-              © 2025 Edufe App. All rights reserved
-            </p>
+            <p className="text-[#868686] text-sm">{t.copyright}</p>
           </div>
 
           {/* Right Side - App Download */}
           <div className="mt-8 md:mt-0">
-            <p className="text-[#141414] font-semibold text-lg mb-4">Get the App</p>
+            <p className="text-[#141414] font-semibold text-lg mb-4">
+              {t.getApp}
+            </p>
             <div className="flex flex-col space-y-3">
               <a href="#app-store" className="inline-block">
                 <img

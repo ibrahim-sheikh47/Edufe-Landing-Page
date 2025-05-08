@@ -37,9 +37,37 @@ import investmentIcon1 from "../assets/investmentIcon1.svg";
 import investmentIcon2 from "../assets/investmentIcon2.svg";
 import investmentIcon3 from "../assets/investmentIcon3.svg";
 import chart from "../assets/chart.webp";
+import feature2Svg from "../assets/feature2svg.svg";
+import feature3Svg from "../assets/feature3svg.svg";
+import feature4Svg from "../assets/feature4svg.svg";
+import feature5Svg from "../assets/feature5svg.svg";
+
+import feature2Img from "../assets/feature2img.png";
+import feature3Img from "../assets/feature3img.png";
+import feature4Img from "../assets/feature4img.png";
+import feature5Img from "../assets/feature5img.png";
+
+import feature1SpanishImg from "../assets/feature1SpanishMob.png";
+import feature2SpanishImg from "../assets/feature2SpanishMob.png";
+import feature3SpanishImg from "../assets/feature3SpanishMob.png";
+import feature4SpanishImg from "../assets/feature4SpanishMob.png";
+import feature5SpanishImg from "../assets/feature5SpanishMob.png";
 
 export default {
+  feature1SpanishImg,
+  feature2SpanishImg,
+  feature3SpanishImg,
+  feature4SpanishImg,
+  feature5SpanishImg,
   chart,
+  feature2Svg,
+  feature3Svg,
+  feature4Svg,
+  feature5Svg,
+  feature2Img,
+  feature3Img,
+  feature4Img,
+  feature5Img,
   downloadIcon1,
   downloadIcon2,
   downloadIcon3,

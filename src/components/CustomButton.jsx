@@ -9,14 +9,14 @@ const CustomButton = ({
   hoverBgColor,
   border = "",
   height = "h-[50px]",
-  width = "w-[170px]",
+  width = "w-[max-content]",
   rounded = "rounded-full",
   fontWeight = "font-medium",
   textSize
 }) => {
   return (
     <button
-      className={`${bgColor} ${hoverBgColor} ${textColor} ${border} ${fontWeight} ${height} ${width} ${rounded} ${textSize} text-lg transition duration-200 cursor-pointer hover:scale-105`}
+      className={`${bgColor} ${hoverBgColor} ${textColor} ${border} ${fontWeight} ${height} ${width} ${rounded} ${textSize} md:whitespace-nowrap btn md:text-lg text-[16px] transition duration-200 cursor-pointer hover:scale-105 px-5`}
     >
       {label}
     </button>

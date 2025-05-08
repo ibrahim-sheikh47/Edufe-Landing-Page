@@ -1,49 +1,63 @@
 import React from "react";
 import assets from "../constants/assets";
+import { useLanguage } from "../context/LanguageContext";
+import translations from "../translations/translations";
 
 const Section7 = () => {
+  const { language } = useLanguage();
+  const t = translations[language].section7;
+
   return (
-    <div className="mx-32 mt-32">
-      <div className="flex justify-center gap-5 text-[56px] leading-[70px] font-bold text-[#141414] ">
-        <img src={assets.versusIcon} className="w-[76px] h-[76px]" alt="" />
+    <div className="md:mx-32 md:mt-32 mt-10 mx-5">
+      <div className="flex items-center justify-center md:gap-5 gap-2 md:text-[56px] text-xl leading-[30px] md:leading-[70px] font-bold text-[#141414] ">
+        <img
+          src={assets.versusIcon}
+          className="md:w-[76px] md:h-[76px] w-[40px] h-[40px]"
+          alt=""
+        />
 
         <p className="bg-[#114A55] text-white rounded-lg p-1 px-2 mr-2">
           EDUFE <br />
         </p>
-        <p> vs Traditional Banks</p>
+        <p className="md:text-[56px] text-xl"> vs {t.traditionalBanks}</p>
       </div>
-      <div className="flex justify-center w-full mt-20 text-xl font-medium">
-        <div className="w-1/3 space-y-6 mt-5 pl-20">
-          <p className="font-bold text-3xl mb-10">Features</p>
-          <p>Annual Returns</p>
-          <p>Net Returns</p>
-          <p>Minimum Deposit</p>
-          <p>Payout Speed</p>
-          <p>Sign-Up Process</p>
-          <p>Liquidity Option</p>
-          <p>Fees</p>
+      <div className="flex flex-col md:flex-row justify-center w-full mt-5 md:mt-20 text-xl font-medium">
+        {/* Left Column - Features */}
+        <div className="w-full md:w-1/3 space-y-6 mt-5 md:text-xl  text-[16px] pl-5 md:pl-20">
+          <p className="font-bold md:text-3xl text-xl mb-10">{t.features}</p>
+          <p>{t.annualReturns}</p>
+          <p>{t.netReturns}</p>
+          <p>{t.minimumDeposit}</p>
+          <p>{t.payoutSpeed}</p>
+          <p>{t.signUpProcess}</p>
+          <p>{t.liquidityOption}</p>
+          <p>{t.fees}</p>
         </div>
-        <div className="w-1/3 pl-5">
-          <div className="border-[#31C440] w-[350px] border p-5 rounded-[40px] space-y-6 shadow-[0_0_44px_22px_rgba(49,196,64,0.18)]">
-            <p className="font-bold text-3xl mb-10">🔥 Edufe</p>
-            <p>12% - 18%</p>
-            <p>(Year 1) 12% - 18%</p>
-            <p>Any Amount</p>
-            <p>Monthly</p>
-            <p>30 Seconds on Mobile</p>
-            <p>In-App Marketplace</p>
-            <p>0%</p>
+
+        {/* Middle Column - Edufe */}
+        <div className="w-full md:w-1/3 pl-5 flex justify-center mt-10 md:mt-0">
+          <div className="border-[#31C440] w-[90%] md:w-[350px] border p-5 rounded-[40px] space-y-6 shadow-[0_0_44px_22px_rgba(49,196,64,0.18)] md:text-xl  text-[16px] ">
+            <p className="font-bold md:text-3xl text-xl mb-10">🔥 Edufe</p>
+            <p>{t.edufeAnnualReturns}</p>
+            <p>{t.edufeNetReturns}</p>
+            <p>{t.edufeMinimumDeposit}</p>
+            <p>{t.edufePayoutSpeed}</p>
+            <p>{t.edufeSignUpProcess}</p>
+            <p>{t.edufeLiquidityOption}</p>
+            <p>{t.edufeFees}</p>
           </div>
         </div>
-        <div className="w-1/3 space-y-6 mt-4 pl-20">
-          <p className="font-bold text-3xl mb-10">Banks</p>
-          <p>8% (minus 6% fees in Year 1)</p>
-          <p>~2%</p>
-          <p>L5,000+</p>
-          <p>Quarterly or Annually</p>
-          <p>In-Person, Paperwork, Delays</p>
-          <p>Early Withdrawal Penalties</p>
-          <p>6% Hidden Fees (Year 1)</p>
+
+        {/* Right Column - Banks */}
+        <div className="w-full md:w-1/3 md:text-xl  text-[16px]  space-y-6 mt-10 md:mt-4 pl-5 md:pl-20">
+          <p className="font-bold md:text-3xl text-xl mb-10">{t.banks}</p>
+          <p>{t.banksAnnualReturns}</p>
+          <p>{t.banksNetReturns}</p>
+          <p>{t.banksMinimumDeposit}</p>
+          <p>{t.banksPayoutSpeed}</p>
+          <p>{t.banksSignUpProcess}</p>
+          <p>{t.banksLiquidityOption}</p>
+          <p>{t.banksFees}</p>
         </div>
       </div>
     </div>

@@ -1,48 +1,49 @@
 import { ArrowBack, ArrowForward } from "@mui/icons-material";
 import { useState, useRef, useEffect } from "react";
+import { useLanguage } from "../context/LanguageContext";
+import translations from "../translations/translations";
 
 const Section10 = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const scrollContainerRef = useRef(null);
 
+  const { language } = useLanguage();
+  const t = translations[language].section10;
+
   const testimonials = [
     {
       id: 1,
-      name: "Carlos M.",
-      location: "Tegucigalpa",
-      avatar: "/path-to-carlos-image.jpg", // Replace with your image path
-      quote:
-        "10 months and never missed a payout. Edufe is reliable and way easier than banks",
-      bgColor: "bg-[#31C440]", // Green background
+      name: t.testimonials[0].name,
+      location: t.testimonials[0].location,
+      quote: t.testimonials[0].quote,
+      avatar: "/path-to-carlos-image.jpg",
+      bgColor: "bg-[#31C440]",
       textColor: "text-[#31C440]",
     },
     {
       id: 2,
-      name: "Marta R.",
-      location: "San Pedro Sula",
-      avatar: "/path-to-marta-image.jpg", // Replace with your image path
-      quote:
-        "I invested L1,000 just to test. Now I put in more each month. The results are real",
+      name: t.testimonials[1].name,
+      location: t.testimonials[1].location,
+      quote: t.testimonials[1].quote,
+      avatar: "/path-to-marta-image.jpg",
       bgColor: "bg-[#0A4958]",
-      textColor: "text-[#0A4958]", // Dark teal background
+      textColor: "text-[#0A4958]",
     },
     {
       id: 3,
-      name: "Luis F.",
-      location: "La Ceiba",
+      name: t.testimonials[2].name,
+      location: t.testimonials[2].location,
+      quote: t.testimonials[2].quote,
       avatar: "/path-to-luis-image.jpg",
-      quote:
-        "The platform is very intuitive. I can track my investments easily and see growth.",
       bgColor: "bg-[#31C440]",
       textColor: "text-[#31C440]",
     },
     {
       id: 4,
-      name: "Sofia P.",
-      location: "Comayagua",
+      name: t.testimonials[3].name,
+      location: t.testimonials[3].location,
+      quote: t.testimonials[3].quote,
       avatar: "/path-to-sofia-image.jpg",
-      quote:
-        "Customer service is excellent. Any questions I have get answered quickly.",
       bgColor: "bg-[#0A4958]",
       textColor: "text-[#0A4958]",
     },
@@ -65,7 +66,6 @@ const Section10 = () => {
 
   const prevSlide = () => {
     if (scrollContainerRef.current) {
-
       const cardWidth = scrollContainerRef.current.children[0].offsetWidth;
       const scrollAmount = cardWidth + 24; // card width + gap
 
@@ -78,7 +78,6 @@ const Section10 = () => {
       setCurrentSlide(prevIndex);
     }
   };
-
 
   // Handle scroll events to update currentSlide
   useEffect(() => {
@@ -110,41 +109,31 @@ const Section10 = () => {
   const isNextVisible = currentSlide < testimonials.length - 1;
 
   return (
-    <section className="ml-28 mx-auto py-16 px-4 sm:px-6 lg:px-8">
+    <section className="md:ml-28 mx-auto py-16 px-4 sm:px-6 lg:px-8">
       <div className="grid grid-cols-1 lg:grid-cols-12">
         {/* Left Column - Text */}
         <div className="lg:col-span-5 flex flex-col justify-center">
-          <h2 className="text-4xl md:text-[56px] font-bold text-[#141414] mb-6">
-            Hear What Our
+          <h2 className="text-xl md:text-[56px] font-bold text-[#141414] mb-6">
+            {t.hearWhatOur}
             <br />
-            Clients Say!
+            {t.clientsSay}
           </h2>
-          <p className="text-[#868686] mb-8 text-2xl">
-            We've been in market for over 2 years <br /> with a 100% repayment
-            success rate and <br />
-            dozens of satisfied investors who trust us.
+          <p className="text-[#868686] mb-8 tex-sm md:text-2xl">
+            {t.marketExperienceLine1}
+            <br />
+            {t.marketExperienceLine2} <br />
+            {t.marketExperienceLine3}
           </p>
 
           {/* Navigation Dots and Arrows */}
           <div className="flex items-center mt-4 ">
-            {/* <div className="flex space-x-2 mr-4">
-              {testimonials.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => goToSlide(index)}
-                  className={`w-3 h-3 rounded-full ${
-                    currentSlide === index ? "bg-gray-800" : "bg-gray-300"
-                  }`}
-                  aria-label={`Go to slide ${index + 1}`}
-                />
-              ))}
-            </div> */}
-
-            <div className="flex space-x-2">
+            <div className="flex space-x-2 md:mb-0 mb-5">
               <button
                 onClick={prevSlide}
                 className={`flex items-center justify-center w-10 h-10 border border-gray-300 rounded-full ${
-                  !isPrevVisible ? "opacity-30 cursor-not-allowed" : "cursor-pointer"
+                  !isPrevVisible
+                    ? "opacity-30 cursor-not-allowed"
+                    : "cursor-pointer"
                 }`}
                 aria-label="Previous testimonial"
                 disabled={!isPrevVisible}
@@ -155,7 +144,9 @@ const Section10 = () => {
               <button
                 onClick={nextSlide}
                 className={`flex items-center justify-center w-10 h-10 border border-gray-300 rounded-full ${
-                  !isNextVisible ? "opacity-30 cursor-not-allowed" : "cursor-pointer"
+                  !isNextVisible
+                    ? "opacity-30 cursor-not-allowed"
+                    : "cursor-pointer"
                 }`}
                 aria-label="Next testimonial"
                 disabled={!isNextVisible}
@@ -176,7 +167,7 @@ const Section10 = () => {
             {testimonials.map((testimonial) => (
               <div
                 key={testimonial.id}
-                className={`${testimonial.bgColor} text-white rounded-3xl p-8 flex flex-col w-[350px] h-[500px] flex-shrink-0 snap-center`}
+                className={`${testimonial.bgColor} text-white rounded-3xl p-8 flex flex-col w-[350px] md:h-[500px] flex-shrink-0 snap-center`}
               >
                 {/* Avatar */}
                 <div className="flex mb-6">
@@ -196,13 +187,13 @@ const Section10 = () => {
                 </div>
 
                 {/* Quote */}
-                <p className="text-2xl font-medium flex-grow my-8">
+                <p className="md:text-2xl text-lg font-medium flex-grow my-4 md:my-8">
                   {testimonial.quote}
                 </p>
 
                 {/* Name and Location */}
                 <div
-                  className={`bg-white rounded-full py-2 px-4 w-fit font-semibold text-lg ${testimonial.textColor}`}
+                  className={`bg-white rounded-full py-2 px-4 w-fit font-semibold text-sm md:text-lg ${testimonial.textColor}`}
                 >
                   <span className="">{testimonial.name}</span>
                   <span className="mx-1">·</span>
