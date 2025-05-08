@@ -39,11 +39,9 @@ const Section3 = () => {
         </div>
         <div className="flex-1">
           <BankDisAdvCard
-            title={["Banking Wastes ", <br key="1" />, "Time and Money"]}
+            title={t.title3}
+            subTitle={t.subtitle3}
             img={assets.moneyClockIcon}
-            subTitle={
-              "And that’s if you go to the bank in person, sign paperwork, and wait days to activate"
-            }
             imgWidth="md:w-[170px] w-[120px]"
           />
         </div>

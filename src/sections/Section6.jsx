@@ -80,7 +80,7 @@ const Section6 = () => {
             <img src={assets.amountDragger} className="md:h-[85px] h-[50px]" alt="" />
             <button className="md:h-[85px] h-[50px] bg-[#F3F3F3] rounded-3xl w-[120px] md:w-[160px]">
               {" "}
-              3 years
+              {t.years}
             </button>
           </div>
         </GettingStartedCard>
@@ -90,7 +90,7 @@ const Section6 = () => {
         >
           <div className="absolute md:bottom-0 bottom-5 mt-5 w-full">
             <img
-              src={assets.investFundsButton}
+              src={language === "es" ? assets.investFundsButtonSpanish : assets.investFundsButton}
               className="md:h-[180px] h-[90px] -ml-5 md:-ml-8"
               alt=""
             />

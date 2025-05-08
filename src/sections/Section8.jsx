@@ -63,7 +63,7 @@ const Section8 = () => {
         {/* Compound Button */}
         <div className="flex justify-center mt-10 md:mt-20">
           <img
-            src={assets.compoundBtn}
+            src={language === "es" ? assets.compoundBtnSpanish : assets.compoundBtn}
             className="w-auto h-auto"
             alt="Calculate Compound Interest"
           />

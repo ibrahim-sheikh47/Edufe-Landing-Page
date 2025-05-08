@@ -70,8 +70,8 @@ const Section2 = () => {
             </div>
 
             <div className="bg-white border-[#D9D9D980] border  rounded-2xl shadow-md p-6 flex-1 flex flex-col items-center justify-center">
-              <img
-                src={assets.portfolioRating}
+            <img
+                src={language === "es" ? assets.portfolioRatingSpanish : assets.portfolioRating}
                 alt=""
                 className="md:object-fit w-30 h-30"
               />
@@ -89,12 +89,12 @@ const Section2 = () => {
 
         <div className="flex flex-col md:ml-[-20px]">
           <img
-            src={assets.investmentTarget}
+            src={language === "es" ? assets.investmentTargetSpanish : assets.investmentTarget}
             className="w-[210px] h-[100px] object-cover"
             alt=""
           />
           <img
-            src={assets.portfolioGrowth}
+            src={language === "es" ? assets.portfolioGrowthSpanish : assets.portfolioGrowth}
             className="md:w-[350px] md:h-[242px]"
             alt=""
           />

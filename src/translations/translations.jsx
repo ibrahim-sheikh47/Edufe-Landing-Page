@@ -110,6 +110,7 @@ const translations = {
       step4Title: "Tap 'Invest' and Start Earning",
       step4Subtitle:
         "That’s it. You start receiving returns every month, directly to your Edufe wallet",
+      years: "3 years",
     },
     section7: {
       traditionalBanks: "Traditional Banks",
@@ -340,6 +341,7 @@ const translations = {
       step4Title: "Toca 'Invertir' y Comienza a Ganar",
       step4Subtitle:
         "Eso es todo. Comienzas a recibir rendimientos cada mes, directamente en tu billetera Edufe.",
+      years: "3 Años",
     },
     section7: {
       traditionalBanks: "Bancos Tradicionales",

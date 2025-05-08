@@ -3,9 +3,12 @@ import instantTransfer from "../assets/instantTransfer.svg";
 import minimumFees from "../assets/minimumFees.svg";
 import amountInvested from "../assets/amountInvested.svg";
 import portfolioRating from "../assets/portfolioRating.webp";
+import portfolioRatingSpanish from "../assets/portfolioRatingSpanish.webp";
 import portfolioImg from "../assets/portfolio_img_1.webp";
 import investmentTarget from "../assets/investmentTarget.webp";
+import investmentTargetSpanish from "../assets/investmentTargetSpanish.webp";
 import portfolioGrowth from "../assets/portfolioGrowth.webp";
+import portfolioGrowthSpanish from "../assets/portfolioGrowthSpanish.webp";
 import moneyClockIcon from "../assets/moneyClockIcon.webp";
 import moneyBagIcon from "../assets/moneyBagIcon.webp";
 import inflationIcon from "../assets/inflationIcon.webp";
@@ -20,10 +23,12 @@ import CheckedShadow from "../assets/CheckedShadow.webp";
 import gettingStartedIcon from "../assets/gettingStartedIcon.webp";
 import amountDragger from "../assets/amountDragger.webp";
 import investFundsButton from "../assets/investFundsButton.webp";
+import investFundsButtonSpanish from "../assets/investFundsBtnSpanish.webp";
 import versusIcon from "../assets/versusIcon.webp";
 import moneyMultipleIcon from "../assets/moneyMultipleIcon.webp";
 import graphImg from "../assets/graphImg.webp";
 import compoundBtn from "../assets/compoundBtn.svg";
+import compoundBtnSpanish from "../assets/compoundBtnSpanish.svg";
 import sparkleIcon from "../assets/sparkleIcon.webp";
 import retireIcon1 from "../assets/retireIcon1.svg";
 import retireIcon2 from "../assets/retireIcon2.svg";
@@ -42,18 +47,23 @@ import feature3Svg from "../assets/feature3svg.svg";
 import feature4Svg from "../assets/feature4svg.svg";
 import feature5Svg from "../assets/feature5svg.svg";
 
-import feature2Img from "../assets/feature2img.png";
-import feature3Img from "../assets/feature3img.png";
-import feature4Img from "../assets/feature4img.png";
-import feature5Img from "../assets/feature5img.png";
+import feature2Img from "../assets/feature2img.webp";
+import feature3Img from "../assets/feature3img.webp";
+import feature4Img from "../assets/feature4img.webp";
+import feature5Img from "../assets/feature5img.webp";
 
-import feature1SpanishImg from "../assets/feature1SpanishMob.png";
-import feature2SpanishImg from "../assets/feature2SpanishMob.png";
-import feature3SpanishImg from "../assets/feature3SpanishMob.png";
-import feature4SpanishImg from "../assets/feature4SpanishMob.png";
-import feature5SpanishImg from "../assets/feature5SpanishMob.png";
+import feature1SpanishImg from "../assets/feature1SpanishMob.webp";
+import feature2SpanishImg from "../assets/feature2SpanishMob.webp";
+import feature3SpanishImg from "../assets/feature3SpanishMob.webp";
+import feature4SpanishImg from "../assets/feature4SpanishMob.webp";
+import feature5SpanishImg from "../assets/feature5SpanishMob.webp";
 
 export default {
+  portfolioGrowthSpanish,
+compoundBtnSpanish,
+investFundsButtonSpanish,
+investmentTargetSpanish,
+portfolioRatingSpanish,
   feature1SpanishImg,
   feature2SpanishImg,
   feature3SpanishImg,
