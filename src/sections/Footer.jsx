@@ -17,17 +17,17 @@ const Footer = () => {
             <div>
               <h2 className="text-2xl font-bold text-[#141414]">
                 Edufe{" "}
-                <span className="font-normal text-[#868686] text-lg">
+                <span className="font-normal text-[#868686] md:text-lg text-sm">
                   {t.slogan}
                 </span>
               </h2>
             </div>
 
-            <nav className="flex space-x-6 text-[#141414] md:text-[16px] ">
+            <nav className="flex space-x-6 text-[#141414] md:text-[16px] text-xs">
               <a href="#how-it-works" className="hover:text-[#31C440]">
                 {t.howItWorks}
               </a>
-              <a href="#our-solutions" className="hover:  text-[#31C440]">
+              <a href="#our-solutions" className="hover:text-[#31C440]">
                 {t.ourSolutions}
               </a>
               <a href="#why-edufe" className="hover:text-[#31C440]">
