@@ -8,7 +8,7 @@ const Footer = () => {
   const t = translations[language].footer;
 
   return (
-    <footer className="bg-gray-50 py-8 px-4 sm:px-6 lg:px-16 mt-20">
+    <footer className="bg-gray-50 py-8 px-4 sm:px-6 lg:px-16 mt-20 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-start">
           {/* Left Side - Logo and Text */}
@@ -18,16 +18,16 @@ const Footer = () => {
               <h2 className="text-2xl font-bold text-[#141414]">
                 Edufe{" "}
                 <span className="font-normal text-[#868686] text-lg">
-                  ({t.slogan})
+                  {t.slogan}
                 </span>
               </h2>
             </div>
 
-            <nav className="flex space-x-6 text-[#141414] text-[16px]">
+            <nav className="flex space-x-6 text-[#141414] md:text-[16px] ">
               <a href="#how-it-works" className="hover:text-[#31C440]">
                 {t.howItWorks}
               </a>
-              <a href="#our-solutions" className="hover:text-[#31C440]">
+              <a href="#our-solutions" className="hover:  text-[#31C440]">
                 {t.ourSolutions}
               </a>
               <a href="#why-edufe" className="hover:text-[#31C440]">
